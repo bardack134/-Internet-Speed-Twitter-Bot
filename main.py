@@ -28,6 +28,7 @@ class InternetSpeedTwitterBott:
         # attributes that will save the internet speed information  
         self.up = 0
         self.down = 0
+        self.tweet=""
         
     def cookies(self):
         """Methods that accept the cookies"""
@@ -74,9 +75,13 @@ class InternetSpeedTwitterBott:
             print(f"the internet speed is down {self.down} and up {self.up}")
             print()
             
+            self.tweet = f"Hey Internet Provider, why is my internet speed {self.down}down/{self.up}up when I pay for {PROMISED_DOWN}down/{PROMISED_UP}up?"
+            
+            
         except Exception as err:
             print(f"Error occurred while finding the 'Go button' cookie element:  {err}")     
-            
+            pass
+                    
                     
     def tweet_at_provider(self):
         """This method login in to twitter an include the up/downs speeds got before and the promises speeds and send the tweet"""
@@ -162,7 +167,9 @@ class InternetSpeedTwitterBott:
         try:    
             #get and click in the button "post" 
             sleep(3)
+            twitter_text_box.send_keys(self.tweet)
             
+            sleep(2)
             post=self.driver.find_element(By.CSS_SELECTOR, '[data-testid="tweetButtonInline"]')
             
             post.click()   
