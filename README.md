@@ -28,5 +28,5 @@ This project consists of a Python script that automates the measurement of inter
 
 
 ![img2](https://github.com/bardack134/-Internet-Speed-Twitter-Bot/assets/142977989/3d7ce666-54fc-4b26-8a81-9ae3f2bfe98f)
+![img](https://github.com/bardack134/-Internet-Speed-Twitter-Bot/assets/142977989/bc24f9fa-d237-4f15-a379-e2b2c5afb190)
 
-![img](https://github.com/bardack134/-Internet-Speed-Twitter-Bot/assets/142977989/3f8e1471-4d31-4242-9254-8ce283d0702c)
