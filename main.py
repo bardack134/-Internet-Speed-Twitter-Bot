@@ -51,7 +51,7 @@ class InternetSpeedTwitterBott:
         try:
             sleep(1)
             
-            #get the 'Go' button and do click()
+            #get the 'Go' button in the internet speed website and do click()
             self.driver.find_element(By.CSS_SELECTOR, "span.start-text").click()
             
         except Exception as err:
@@ -61,9 +61,9 @@ class InternetSpeedTwitterBott:
             
         try:
             #wait 1 minute while checking for internet speed
-            sleep(47)
+            sleep(45)
             
-            #In these variables, we store the speed data obtained from the speed website
+            #In these variables 'self.down and self.up', we store the speed data obtained from the speed website
             self.up = self.driver.find_element(By.XPATH, '//*[@id="container"]/div/div[3]/div/div/div/div[2]/div[3]/div[3]/div/div[3]/div/div/div[2]/div[1]/div[2]/div/div[2]/span').text
             
             sleep(2)
@@ -75,6 +75,7 @@ class InternetSpeedTwitterBott:
             print(f"the internet speed is down {self.down} and up {self.up}")
             print()
             
+            #this is the tweet that we will post on Twitter
             self.tweet = f"Hey Internet Provider, why is my internet speed {self.down}down/{self.up}up when I pay for {PROMISED_DOWN}down/{PROMISED_UP}up?"
             
             
